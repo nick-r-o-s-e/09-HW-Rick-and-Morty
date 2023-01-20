@@ -1,0 +1,103 @@
+body {
+  background-color: #272b33;
+
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .main-heading {
+    font-size: 4em;
+    color: #fff;
+    padding: 0 0 55px;
+  }
+
+  .load-more {
+    cursor: pointer;
+    background-color: #3c3e44;
+    border: none;
+    border-radius: 0.3em;
+    margin: 60px 0 80px;
+    width: fit-content;
+    font-size: 2.1em;
+    font-weight: 600;
+    padding: 8px 23px 12px;
+    color: #fff;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+    &:hover {
+      background-color: #585b64;
+    }
+
+    &.no-more-pages {
+      cursor: default;
+      font-size: 1.7em;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+
+.container__characters {
+  width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  .card {
+    overflow: hidden;
+    background-color: #3c3e44;
+    color: #fff;
+    border-radius: 1.25em;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+    img {
+      border-right: none;
+      height: 250px;
+    }
+    .card__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 13px 13px 0;
+
+      .card__content__heading {
+        h1 {
+          padding: 13px 0 10px;
+          line-height: 120%;
+          font-size: 2.1em;
+          font-weight: 800;
+        }
+        h2 {
+          font-weight: 600;
+          font-size: 0.9em;
+          line-height: 100%;
+        }
+      }
+
+      .card__content__details {
+        h3 {
+          color: #8b8b8a;
+          font-weight: 600;
+          font-size: 1.1em;
+        }
+        p {
+          transition: letter-spacing 0.2s ease;
+          font-weight: 400;
+          font-size: 1.3em;
+          cursor: pointer;
+          &:hover {
+            text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.445);
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+  }
+}
